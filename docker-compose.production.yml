@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+    luisbeu:
+        build:
+            dockerfile: Dockerfile.production
+
+        container_name: luisBeuProd
+
+        environment:
+            VIRTUAL_HOST: ${APP_VIRTUAL_HOST?Missing environment variable see doku}

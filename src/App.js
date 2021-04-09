@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React from 'react';
+
+import Index from './pages/Index/Index';
+import LegalNotice from './pages/LegalNotice/LegalNotice';
+import Privacy from './pages/Privacy/Privacy';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            <Switch>
+                <Route exact path="/legal-notice" component={LegalNotice} />
+                <Route exact path="/privacy" component={Privacy} />
+                <Route component={Index} />
+            </Switch>
+        </BrowserRouter>
+    );
 }
 
 export default App;
