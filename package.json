@@ -21,7 +21,8 @@
         "format": "prettier --check .",
         "start": "react-scripts start",
         "build": "react-scripts build",
-        "test": "react-scripts test"
+        "test": "react-scripts test",
+        "prepare": "husky install"
     },
     "husky": {
         "hooks": {
