@@ -17,6 +17,4 @@ function App() {
     );
 }
 
-// TODO: husky
-
 export default App;

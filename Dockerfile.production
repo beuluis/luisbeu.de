@@ -4,7 +4,7 @@ FROM node:14.15-alpine AS builder
 WORKDIR /app
 ENV NODE_ENV production
 COPY package.json package-lock.json .env* /app/
-RUN npm ci
+RUN npm ci --ignore-scripts
 COPY public /app/public
 COPY src /app/src
 RUN npm run build

@@ -1,6 +1,7 @@
 ### Project ###
 build
 public
+.husky
 
 ### Code ###
 .vscode/*
